@@ -1,2 +1,14 @@
-Apologies for any current viewers/trackers but this is going to be updated w/b 19/10/26 or w/b 26/10/26
-I am currently learning how to code in Rust
+fn main () {
+    //As ASCII goes to 255, and 8 bit integer works.
+    let ascii_numbers:[u8;23]=[99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125];
+    
+    let flag: String=ascii_numbers
+    //makes sure that we go through every single value in the string withotu overwriting
+    .iter()
+    //Converts the numbers are converted into characters
+    .map(|&num| num as char)
+    .collect();
+    
+    println!("The flag is {}", flag);
+    
+}
